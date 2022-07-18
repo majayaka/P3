@@ -88,8 +88,10 @@ body .fonction .boutons_fonction {
   width: 100%;
   flex-direction: column;
   text-align: center;
-  align-items: center;
   margin: 0 auto;
+}
+body .fonction .boutons_fonction .bouton_fc {
+  width: 100%;
 }
 body .fonction .boutons_fonction .bouton_fc button {
   border-radius: 20px;
