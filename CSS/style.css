@@ -1,31 +1,33 @@
-body {
-  /*HEADER*/
-  /*SEARCH AREA*/
-  /* explorer area */
-  /* fonction area */
-}
+
+
 body h1 {
   font-family: "Shrikhand", cursive;
 }
-body p, body h2 {
+body p, h2 {
   font-family: "Roboto", sans-serif;
 }
-body header {
+
+  /*HEADER*/
+
+header {
   max-width: 100%;
   height: 65px;
 }
-body header .area_logo {
+
+.area_logo {
   text-align: center;
   max-width: 100%;
 }
-body header .area_logo img {
+
+.area_logo img {
   height: 35px;
   max-width: 100%;
   margin-top: 20px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body .locate {
+
+.locate {
   width: 100%;
   background: #EAEAEA;
   height: 50px;
@@ -35,35 +37,43 @@ body .locate {
   justify-content: center;
   box-shadow: inner 0 0 20px rgba(0, 0, 0, 0.2);
 }
-body .locate i {
+
+.locate i {
   text-align: center;
 }
-body .locate input {
+
+.locate input {
   width: 35%;
   background: #EAEAEA;
   border: none;
   text-align: center;
   font-size: 15px;
 }
-body .explorer {
+
+  /*SEARCH AREA*/
+
+.explorer {
   width: 100%;
   height: 285px;
   margin-top: -15px;
   background-color: #F6F6F6;
   text-align: center;
 }
-body .explorer h2 {
+
+.explorer h2 {
   padding-top: 30px;
   font-size: 18px;
   width: 100%;
 }
-body .explorer p {
+
+.explorer p {
   margin: 10px 0 20px;
   font-size: 15px;
   font-weight: lighter;
   width: 100%;
 }
-body .explorer button {
+
+.explorer button {
   border-radius: 30px;
   width: 57%;
   height: 50px;
@@ -73,27 +83,37 @@ body .explorer button {
   background: rgb(232, 114, 218);
   background: linear-gradient(90deg, rgb(232, 114, 218) 0%, rgb(166, 92, 219) 100%, rgb(0, 212, 255) 100%);
 }
-body .fonction {
+
+
+/* fonction area */
+
+.fonction {
   width: 100%;
   height: 130px;
   padding-top: 40px;
   background-color: #FFFFFF;
 }
-body .fonction h2 {
+
+.fonction h2 {
   font-size: 20px;
   padding: 0 0 20px 10px;
 }
-body .fonction .boutons_fonction {
+
+.boutons_fonction {
   display: flex;
   width: 100%;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
 }
-body .fonction .boutons_fonction .bouton_fc {
-  width: 100%;
+
+.bouton_fc {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
 }
-body .fonction .boutons_fonction .bouton_fc button {
+
+.bouton_fc button {
   border-radius: 20px;
   width: 90%;
   height: 75px;
@@ -101,4 +121,4 @@ body .fonction .boutons_fonction .bouton_fc button {
   background-color: #F6F6F6;
   font-size: 15px;
   margin-bottom: 20px;
-}/*# sourceMappingURL=style.css.map */
+}
