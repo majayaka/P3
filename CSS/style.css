@@ -3,6 +3,7 @@
 body h1 {
   font-family: "Shrikhand", cursive;
 }
+
 body p, h2 {
   font-family: "Roboto", sans-serif;
 }
@@ -23,8 +24,7 @@ header {
   height: 35px;
   max-width: 100%;
   margin-top: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .locate {
@@ -35,8 +35,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inner 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow:  inset 0 3px 3px 0 rgba(0, 0, 0, .25);
+  
 }
+
+
 
 .locate i {
   text-align: center;
@@ -48,6 +51,7 @@ header {
   border: none;
   text-align: center;
   font-size: 15px;
+
 }
 
   /*SEARCH AREA*/
@@ -80,8 +84,13 @@ header {
   border: none;
   color: #FFFFFF;
   font-size: 15px;
-  background: rgb(232, 114, 218);
-  background: linear-gradient(90deg, rgb(232, 114, 218) 0%, rgb(166, 92, 219) 100%, rgb(0, 212, 255) 100%);
+  background: linear-gradient(90deg, rgb(232, 114, 218) 0%, rgb(166, 92, 219) 100%);
+  box-shadow: 0 10px 13px 0 rgba(0, 0, 0, .25);
+}
+
+.explorer button:hover {
+  background: rgb(230,165,226);
+  background: linear-gradient(90deg, rgba(230,165,226,1) 0%, rgba(220,96,214,1) 100%);
 }
 
 
@@ -92,25 +101,26 @@ header {
   height: 130px;
   padding-top: 40px;
   background-color: #FFFFFF;
+  text-align: center;
 }
 
-.fonction h2 {
+.area_title {
   font-size: 20px;
   padding: 0 0 20px 10px;
 }
 
-.boutons_fonction {
+.wrapper {
   display: flex;
   width: 100%;
   flex-direction: column;
   text-align: center;
-  margin: 0 auto;
+  margin: auto 0;
 }
 
 .bouton_fc {
-  max-width: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+
 }
 
 .bouton_fc button {
@@ -121,4 +131,72 @@ header {
   background-color: #F6F6F6;
   font-size: 15px;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
+
+.bouton_fc button:hover {
+  background-color: #F5EDFF
+}
+
+.bouton_fc i {
+  color:#7E7E7E
+}
+
+.bouton_fc i:hover {
+  color: #9356DC;
+}
+
+
+.circle {
+  background: #9356DC;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: center;
+  line-height: 20px;
+  position: absolute;
+  z-index: 2;
+}
+
+/* restaurant area */
+
+.resto {
+  width: 100%;
+  height: 1225px;
+  padding-top: 40px;
+  background-color: #F6F6F6;
+  align-items: center;
+  margin-top: 200px; //
+}
+
+.resto_card {
+  width: 90%;
+  height: 255px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.resto_card img {
+  max-width: 100%;
+  height: 175px;
+  object-fit: cover;
+  
+}
+
+.resto_content{
+  text-align: left;
+}
+
+.resto_card h3 {
+
+}
+
+.resto_card p{}
+
+
+
