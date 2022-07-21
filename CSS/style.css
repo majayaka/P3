@@ -1,35 +1,36 @@
-
-
-h1 {
+body {
+  max-width: 100%;
+  box-sizing: border-box;
+  /*HEADER*/
+  /*LOCATE AREA*/
+  /*SEARCH AREA*/
+  /* fonction area */
+  /* restaurant area */
+  /*FOOTER*/
+}
+body h1 {
   font-family: "Shrikhand", cursive;
 }
-
-p, h2, h3 {
+body p, body h2, body h3 {
   font-family: "Roboto", sans-serif;
 }
-
-
-  /*HEADER*/
-
-header {
+body header {
   max-width: 100%;
   height: 65px;
   margin: auto 0;
 }
-
-.area_logo {
+body header .area_logo {
   text-align: center;
   max-width: 100%;
 }
-
-.area_logo img {
+body header .area_logo img {
   height: 35px;
   max-width: 100%;
   margin-top: 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.locate {
+body .locate {
   width: 100%;
   background: #EAEAEA;
   height: 50px;
@@ -37,49 +38,37 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow:  inset 0 3px 3px 0 rgba(0, 0, 0, .25);
-  
+  box-shadow: inset 0 3px 3px 0 rgba(0, 0, 0, 0.25);
 }
-
-
-
-.locate i {
+body .locate i {
   text-align: center;
 }
-
-.locate input {
-  width: 35%;
+body .locate input {
+  width: 100%;
   background: #EAEAEA;
   border: none;
   text-align: center;
   font-size: 15px;
-
 }
-
-  /*SEARCH AREA*/
-
-.explorer {
+body .explorer {
   width: 100%;
   height: 285px;
   margin-top: -15px;
   background-color: #F6F6F6;
   text-align: center;
 }
-
-.explorer h2 {
+body .explorer h2 {
   padding-top: 30px;
   font-size: 18px;
   width: 100%;
 }
-
-.explorer p {
+body .explorer p {
   margin: 10px 0 20px;
   font-size: 15px;
   font-weight: lighter;
   width: 100%;
 }
-
-.explorer button {
+body .explorer button {
   border-radius: 30px;
   width: 57%;
   height: 50px;
@@ -87,30 +76,23 @@ header {
   color: #FFFFFF;
   font-size: 15px;
   background: linear-gradient(90deg, rgb(232, 114, 218) 0%, rgb(166, 92, 219) 100%);
-  box-shadow: 0 10px 13px 0 rgba(0, 0, 0, .25);
+  box-shadow: 0 10px 13px 0 rgba(0, 0, 0, 0.25);
 }
-
-.explorer button:hover {
-  background: rgb(230,165,226);
-  background: linear-gradient(90deg, rgba(230,165,226,1) 0%, rgba(220,96,214,1) 100%);
+body .explorer button:hover {
+  background: rgb(230, 165, 226);
+  background: linear-gradient(90deg, rgb(230, 165, 226) 0%, rgb(220, 96, 214) 100%);
 }
-
-
-/* fonction area */
-
-.fonction {
+body .fonction {
   width: 100%;
   height: 445px;
   padding-top: 40px 0 40px;
   background-color: #FFFFFF;
 }
-
-.area_title {
+body .fonction .area_title {
   font-size: 20px;
   padding: 0 0 10px 10px;
 }
-
-.wrapper {
+body .fonction .wrapper {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -118,15 +100,13 @@ header {
   margin: auto 0;
   justify-content: space-between;
 }
-
-.bouton_fc {
+body .fonction .bouton_fc {
   width: 100%;
   display: flex;
   margin: 0 auto;
   align-items: center;
 }
-
-.bouton_fc button {
+body .fonction .bouton_fc button {
   border-radius: 20px;
   width: 90%;
   height: 75px;
@@ -136,26 +116,21 @@ header {
   position: relative;
   z-index: 1;
   margin: 10px auto;
-  box-shadow: 0 8px 6px 0 rgba(0, 0, 0, .25);
+  box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.25);
 }
-
-.bouton_fc button:hover {
-  background-color: #F5EDFF
+body .fonction .bouton_fc button:hover {
+  background-color: #F5EDFF;
 }
-
-.bouton_fc i {
-  color:#7E7E7E;
+body .fonction i {
+  color: #7E7E7E;
   position: absolute;
   margin-left: 15%;
   z-index: 2;
 }
-
-.bouton_fc i:hover {
+body .fonction i:hover {
   color: #9356DC;
 }
-
-
-.circle {
+body .fonction .circle {
   background: #9356DC;
   border-radius: 50%;
   width: 20px;
@@ -169,18 +144,14 @@ header {
   z-index: 2;
   margin-left: 3%;
 }
-
-/* restaurant area */
-
-.resto {
+body .resto {
   width: 100%;
   height: 1225px;
   padding-top: 30px;
   background-color: #F6F6F6;
   margin: 20px auto;
 }
-
-.resto_card {
+body .resto .resto_card {
   width: 90%;
   height: 255px;
   border-radius: 20px;
@@ -188,11 +159,19 @@ header {
   display: flex;
   flex-direction: column;
   margin: 20px auto;
-  box-shadow: 0 8px 6px 0 rgba(0, 0, 0, .25);
+  box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.25);
 }
-
-.new {
-  background-color:  #99E2D0;
+body .resto .resto_card img {
+  max-width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0;
+  position: relative;
+  z-index: 1;
+}
+body .resto .resto_card .new {
+  background-color: #99E2D0;
   color: #008766;
   border-radius: 10%;
   height: 27px;
@@ -203,54 +182,39 @@ header {
   margin-left: 60%;
   z-index: 2;
 }
-
-.resto_card img {
-  max-width: 100%;
-  height: 175px;
-  object-fit: cover;
-  border-radius: 20px 20px 0;
-  position: relative;
-  z-index: 1;
+body .resto .resto_card .resto_content {
+  width: 65%;
+  height: 75px;
+  text-align: left;
+  padding-left: 10px;
+  line-height: 12px;
 }
-
-.block {
-  display: flex;
-}
-
-.block i {
-  width: 15%;
-  font-size: 2rem;
-  background-color: rgba(255, 255, 255, 0);
-  padding: 20px 0 0 60px;
-  margin-right: 20px;
-  cursor: pointer;
-  transition: transform 400ms;
-}
-
-.block i:hover {
-  transform: (color: rgba(196, 102, 219, 1));
-}
-
-.resto_content{
-width: 65%;
-height: 75px;
-text-align: left;
-padding-left: 10px;
-line-height: 12px;
-
-}
-
-.resto_card h3 {
+body .resto .resto_card .resto_content h3 {
   font-size: 20px;
 }
-
-.resto_card p{
+body .resto .resto_card .resto_content p {
   font-size: 18px;
 }
-
-/*FOOTER*/
-
-footer {
+body .resto .resto_card .resto_content i {
+  font-size: 2rem;
+  position: absolute;
+  right: 5rem;
+  top: 74rem;
+  z-index: 1;
+}
+body .resto .resto_card .resto_content .fas {
+  color: transparent;
+  background-image: linear-gradient(90deg, rgb(232, 114, 218) 0%, rgb(166, 92, 219) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+body .resto .resto_card .resto_content:hover .fas {
+  opacity: 1;
+  transform: scale(1.2);
+}
+body footer {
   width: 100%;
   height: 198px;
   margin-top: 60px;
@@ -258,34 +222,24 @@ footer {
   color: #fff;
   vertical-align: left;
   padding: 20px 0 0 20px;
-
 }
-
-footer h1{
+body footer h1 {
   font-size: 20px;
   text-align: left;
 }
-
-footer ul {
-  width: 60%;
-  list-style: none;
-  text-align: left;
-
-}
-
-footer ul li {
-  margin-bottom: 5px;
-}
-
-.icon_gap {
+body footer .icon_gap {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-
-.icon_gap i {
-  
+body footer .icon_gap i {
   padding-right: 10px;
-  
 }
-
+body footer ul {
+  width: 60%;
+  list-style: none;
+  text-align: left;
+}
+body footer ul li {
+  margin-bottom: 5px;
+}/*# sourceMappingURL=style.css.map */
