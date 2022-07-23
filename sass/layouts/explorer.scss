@@ -1,0 +1,37 @@
+@use "../utils/mixins";
+
+
+.explorer {
+    text-align: center;
+
+     & h2{
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+    
+     & p {
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+    
+    & button {
+        color: #ffff;
+        font-weight: 300;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 2rem;
+        transition: transform 200ms;
+        margin-top: 1rem;
+        @include mixins.base;
+        @include mixins.gradient(0.9);
+    }
+
+    & button:hover {
+        opacity: 0.9;
+        @include mixins.zoom;
+    }
+}
+
+
+ 

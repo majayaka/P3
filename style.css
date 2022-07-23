@@ -1,59 +1,253 @@
 *, ::before, ::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0 7rem;
+}
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
+
+h2 {
+  padding: 2rem 0;
+  margin: 0;
+}
+
+h3, p {
+  margin: 0;
+}
 
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0 0 0.5rem #00000040;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2509803922);
   padding: 0.3rem;
   margin: 0;
-  position: relative; }
+  position: relative;
+}
 
-main .locate {
+.locate {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   background-color: #f3f3f3;
   text-align: center;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+}
+.locate i {
+  font-size: 1.5rem;
+}
+.locate h2 {
+  font-size: 1.2rem;
+}
 
-main .locate i {
-  font-size: 1.5rem; }
-
-main .locate h2 {
-  font-size: 1.2rem; }
-
-/* EXPLORER */
 .explorer {
-  text-align: center; }
-
+  text-align: center;
+}
 .explorer h2 {
   margin-top: 2rem;
-  font-size: 2rem; }
-
+  font-size: 2rem;
+}
 .explorer p {
   font-size: 1.2rem;
-  font-weight: 100; }
-
+  font-weight: 100;
+}
 .explorer button {
-  color: #ffff;
+  color: white;
   font-weight: 300;
   font-size: 1rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 2px 1px 8px -3px black;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
-  margin-top: 1rem; }
-
+  margin-top: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
 .explorer button:hover {
+  opacity: 0.9;
   transform: scale(1.02);
-  opacity: 0.9; }
+}
+
+.fonction {
+  counter-reset: numbers;
+  margin-bottom: 2rem;
+}
+.fonction ol {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .fonction ol {
+    flex-direction: column;
+  }
+}
+.fonction li {
+  position: relative;
+  list-style: none;
+  background-color: #f6f6f6;
+  padding: 1.5rem 2rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.fonction li::before {
+  content: counter(numbers);
+  counter-increment: numbers;
+  color: white;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+}
+.fonction li:hover {
+  transform: scale(1.02);
+}
+.fonction li i.fa-solid {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
+}
+
+.restos {
+  background-color: #f6f6f6;
+}
+.restos .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .restos .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.restos .wrapper .new {
+  position: relative;
+}
+.restos .wrapper .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+.restos .card_image {
+  height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+.restos .card_image-1 {
+  background-image: url("images/restaurants/menu-1.jpg");
+}
+.restos .card_image-2 {
+  background-image: url("images/restaurants/menu-2.jpg");
+}
+.restos .card_image-3 {
+  background-image: url("images/restaurants/menu-3.jpg");
+}
+.restos .card_image-4 {
+  background-image: url("images/restaurants/menu-4.jpg");
+}
+.restos .card .resto_content {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.restos .card .resto_content::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.restos .card .resto_content::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+}
+.restos .card .resto_content:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+.restos .card .resto_content h3, .restos .card .resto_content p {
+  padding: 0.3rem;
+}
+.restos .card:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.02);
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "shrikhand", sans-serif;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
+}
 
 /*# sourceMappingURL=style.css.map */

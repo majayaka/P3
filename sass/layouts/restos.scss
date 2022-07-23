@@ -1,0 +1,77 @@
+@use "../utils/variables";
+@use "../utils/colors";
+@use "../utils/mixins";
+
+.restos {
+    background-color: #f6f6f6;
+   
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        @media (max-width: variables.$break-point) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .new {
+            position: relative;
+        }
+
+        .new::before {
+            content: "Nouveau";
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            background-color: colors.$light-green;
+            color: darken(colors.$light-green, 50%);
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem;
+        }
+    }
+    .card {
+       
+        &_image {
+            height: 15rem;
+            border-radius: 1rem 1rem 0 0;
+            background-size: cover;
+        }
+
+        @for $i from 1 through 4 {
+            &_image-#{$i} {
+                background-image: url("images/restaurants/menu-#{$i}.jpg");
+            }   
+        }
+
+        .resto_content {
+            position: relative;
+            background-color: white;
+            border-radius: 0 0 1rem 1rem;
+            &::before {
+                @include mixins.heart;
+            }
+            &::after {
+                @include mixins.heart;
+                @include mixins.gradient(1);
+                opacity: 0;
+                color: transparent;
+                font-weight: 900;
+            }
+
+            &:hover::after {
+                opacity: 1;
+                transform: translateY(-50%) scale(1.1);
+            }
+            
+            h3, p{
+                padding: 0.3rem;
+            }
+
+            }
+            &:hover .fas {
+                opacity: 1;
+                transform: translateY(-50%) scale(1.02);
+            }
+    }
+    }
