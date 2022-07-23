@@ -1,0 +1,23 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "projet OC P3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majayaka/P3.git"
+  },
+  "author": "Ayaka Majault",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majayaka/P3/issues"
+  },
+  "homepage": "https://github.com/majayaka/P3#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.54.0"
+  }
+}
