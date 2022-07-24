@@ -1,0 +1,67 @@
+@use "../utils/mixins";
+@use "../utils/colors";
+@use "../utils/variables";
+
+.banner img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    display: block;
+    object-position: center;
+}
+
+
+.resto_title {
+    margin-top: -2rem;
+    h2 {
+        font-family: "Shrikhand", "cursive";
+        padding: 2rem 1rem;
+        position: relative;
+        @include mixins.heart-effect;
+        border-radius: 2rem 2rem 0 0;
+        background-color: colors.$slightlygrey;
+    }
+}
+
+.resto-main {
+    padding: 0 1rem;
+    background-color: colors.$slightlygrey;
+    .plates {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    
+        @media (max-width: variables.$break-point){
+            grid-template-columns: 1fr;
+        }
+       .plate-group {
+            
+            .plate-card {
+                background-color: white;
+                display: flex;
+                margin: 1rem;
+                border-radius: 1rem;
+                border-color: black;
+                .prix {
+                    margin-left: auto;
+                    font-weight: 900;
+                    padding: 1rem;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                .plate-description {
+                    padding: 1rem;
+                }
+                .check {
+                    background-color: colors.$light-green;
+                }
+                & > * {
+                    border: 1px solid red;
+                }
+                &:hover {
+
+                }
+            }
+       }
+    }
+}

@@ -21,12 +21,8 @@ main {
   }
 }
 
-h2 {
-  padding: 2rem 0;
-  margin: 0;
-}
-
-h3, p {
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
   margin: 0;
 }
 
@@ -269,6 +265,111 @@ footer .fa-utensils {
 }
 footer .fa-handshake-angle {
   margin-right: 0.6rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+}
+
+.resto_title {
+  margin-top: -2rem;
+}
+.resto_title h2 {
+  font-family: "Shrikhand", "cursive";
+  padding: 2rem 1rem;
+  position: relative;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #F6F6F6;
+}
+.resto_title h2::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #787878;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.resto_title h2::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #787878;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+}
+.resto_title h2:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.resto-main {
+  padding: 0 1rem;
+  background-color: #F6F6F6;
+}
+.resto-main .plates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 1000px) {
+  .resto-main .plates {
+    grid-template-columns: 1fr;
+  }
+}
+.resto-main .plates .plate-group .plate-card {
+  background-color: white;
+  display: flex;
+  margin: 1rem;
+  border-radius: 1rem;
+  border-color: black;
+}
+.resto-main .plates .plate-group .plate-card .prix {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+.resto-main .plates .plate-group .plate-card .plate-description {
+  padding: 1rem;
+}
+.resto-main .plates .plate-group .plate-card .check {
+  background-color: #99E2D0;
+}
+.resto-main .plates .plate-group .plate-card > * {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */
