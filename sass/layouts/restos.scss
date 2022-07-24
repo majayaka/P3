@@ -31,7 +31,10 @@
         }
     }
     .card {
-       
+        @media (max-width: variables.$break-point) {
+        width: 27rem;
+        }
+
         &_image {
             height: 15rem;
             border-radius: 1rem 1rem 0 0;
@@ -64,8 +67,12 @@
                 transform: translateY(-50%) scale(1.1);
             }
             
-            h3, p{
-                padding: 0.3rem;
+            h3 {
+                padding: 1rem 0 0 1rem;
+            }
+
+            p{
+                padding: 0.5rem 0 1rem 1rem;
             }
 
             }

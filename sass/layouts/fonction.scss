@@ -6,13 +6,20 @@
 
 .fonction {
     counter-reset: numbers;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    h2 {
+        padding-left: 1rem;
+    }
+
     & ol {
         display:flex;
-        gap: 2rem;
+        gap: 1.5rem;
         position:relative;
         @media (max-width: 800px) {
             flex-direction: column;
+            
         }
     }
     & li {

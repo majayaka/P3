@@ -1,12 +1,14 @@
 @use "../utils/mixins";
+@use "../utils/colors";
 
 
 .explorer {
     text-align: center;
+    padding-bottom: 4rem;
+    background-color: colors.$slightlygrey;
 
      & h2{
-        margin-top: 2rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
      & p {
@@ -22,7 +24,7 @@
         border: none;
         border-radius: 2rem;
         transition: transform 200ms;
-        margin-top: 1rem;
+        margin-top: 2rem;
         @include mixins.base;
         @include mixins.gradient(0.9);
     }
