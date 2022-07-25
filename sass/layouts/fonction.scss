@@ -6,11 +6,11 @@
 
 .fonction {
     counter-reset: numbers;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
 
     h2 {
-        padding-left: 1rem;
+        padding: 0 0 1rem 1rem;
     }
 
     & ol {
@@ -48,6 +48,7 @@
 
         &:hover{
             @include mixins.zoom;
+            background-color: colors.$lightpurple;
         }
 
         & i.fa-solid {

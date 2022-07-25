@@ -1,10 +1,18 @@
 @use "../utils/mixins";
 @use "../utils/colors";
 @use "../utils/variables";
+@use "../utils/animations";
+
+header {
+    h1 {
+        padding-bottom: 1rem;
+    }
+
+}
 
 .banner img {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
     object-fit: cover;
     display: block;
     object-position: center;
@@ -13,6 +21,7 @@
 
 .resto_title {
     margin-top: -2rem;
+
     h2 {
         font-family: "Shrikhand", "cursive";
         padding: 2rem 1rem;
@@ -34,14 +43,26 @@
         @media (max-width: variables.$break-point){
             grid-template-columns: 1fr;
         }
+
        .plate-group {
-            
+         
+        h3{
+            font-weight: 100;
+            border-bottom: 3px solid colors.$light-green;
+            padding-bottom: 0.5rem;
+            width: 10%;
+
+         }
+        
             .plate-card {
-                background-color: white;
                 display: flex;
-                margin: 1rem;
+                background-color: white;
+                width: 20rem;
                 border-radius: 1rem;
-                border-color: black;
+                margin: 1rem;
+                overflow:hidden;
+
+                @include mixins.base;  
                 .prix {
                     margin-left: auto;
                     font-weight: 900;
@@ -51,17 +72,84 @@
                 }
                 .plate-description {
                     padding: 1rem;
+                    overflow:hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+
+                    h4, p {
+                        overflow:hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+
+                    }
                 }
                 .check {
+                    display:grid;
+                    place-items: center;
                     background-color: colors.$light-green;
-                }
-                & > * {
-                    border: 1px solid red;
-                }
-                &:hover {
+                    border-radius: 0 1rem 1rem 0;
+                    margin-right: -5rem;
+                    width: 5rem;
+                    transition: all 1s;
 
+                    i {
+                        display:grid;
+                        place-items: center;
+                        background-color: white;
+                        color: colors.$light-green;
+                        border-radius: 1rem;
+                        height: 2rem;
+                        width: 2rem;
+
+                    }
+                }
+                
+                &:hover  {
+                    .check {
+                        margin-right: 0;
+                    }
+                    i {
+                        @include animations.spin;
+                        animation: spin 0.5s ease-in-out;
+                    }
+                    .plate-description {     /* comment faire?? */
+                        overflow:hidden;
+                    }
+                    
                 }
             }
        }
     }
-}
+       .order-button {
+            text-align: center;
+            padding-bottom: 4rem;
+
+           button {
+               color: #ffff;
+               font-weight: 300;
+               font-size: 1rem;
+               padding: 1rem 2rem;
+               border: none;
+               border-radius: 2rem;
+               transition: transform 200ms;
+               margin-top: 2rem;
+               width: 12rem;
+               @include mixins.base;
+               @include mixins.gradient(0.9);
+
+               &:hover {
+                opacity: 0.9;
+                @include mixins.zoom;
+            }
+
+           }
+       }
+   
+           
+   
+       
+       
+    }
+    
+
+

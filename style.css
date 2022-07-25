@@ -30,10 +30,10 @@ header {
   font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2509803922);
-  padding: 0.3rem;
+  padding: 1rem;
   margin: 0;
   position: relative;
-  height: 5.3rem;
+  height: 10vh;
 }
 
 .locate {
@@ -55,6 +55,7 @@ header {
 
 .explorer {
   text-align: center;
+  padding-top: 2rem;
   padding-bottom: 4rem;
   background-color: #F6F6F6;
 }
@@ -84,11 +85,11 @@ header {
 
 .fonction {
   counter-reset: numbers;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 .fonction h2 {
-  padding-left: 1rem;
+  padding: 0 0 1rem 1rem;
 }
 .fonction ol {
   display: flex;
@@ -126,6 +127,7 @@ header {
 }
 .fonction li:hover {
   transform: scale(1.02);
+  background-color: #F5EDFF;
 }
 .fonction li i.fa-solid {
   margin-right: 1rem;
@@ -135,6 +137,10 @@ header {
 
 .restos {
   background-color: #f6f6f6;
+  padding: 1rem 1rem 3rem 1rem;
+}
+.restos h2 {
+  padding: 0 0 2rem;
 }
 .restos .wrapper {
   display: grid;
@@ -163,7 +169,7 @@ header {
 }
 @media (max-width: 1000px) {
   .restos .card {
-    width: 27rem;
+    width: 100%;
   }
 }
 .restos .card_image {
@@ -267,9 +273,14 @@ footer .fa-handshake-angle {
   margin-right: 0.6rem;
 }
 
+/* comment faire sans @mixin?? */
+header h1 {
+  padding-bottom: 1rem;
+}
+
 .banner img {
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   object-fit: cover;
   display: block;
   object-position: center;
@@ -348,12 +359,20 @@ footer .fa-handshake-angle {
     grid-template-columns: 1fr;
   }
 }
+.resto-main .plates .plate-group h3 {
+  font-weight: 100;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 0.5rem;
+  width: 10%;
+}
 .resto-main .plates .plate-group .plate-card {
-  background-color: white;
   display: flex;
-  margin: 1rem;
+  background-color: white;
+  width: 20rem;
   border-radius: 1rem;
-  border-color: black;
+  margin: 1rem;
+  overflow: hidden;
+  box-shadow: 2px 1px 8px -3px #000000;
 }
 .resto-main .plates .plate-group .plate-card .prix {
   margin-left: auto;
@@ -364,12 +383,70 @@ footer .fa-handshake-angle {
 }
 .resto-main .plates .plate-group .plate-card .plate-description {
   padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.resto-main .plates .plate-group .plate-card .plate-description h4, .resto-main .plates .plate-group .plate-card .plate-description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .resto-main .plates .plate-group .plate-card .check {
+  display: grid;
+  place-items: center;
   background-color: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  margin-right: -5rem;
+  width: 5rem;
+  transition: all 1s;
 }
-.resto-main .plates .plate-group .plate-card > * {
-  border: 1px solid red;
+.resto-main .plates .plate-group .plate-card .check i {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+.resto-main .plates .plate-group .plate-card:hover .check {
+  margin-right: 0;
+}
+.resto-main .plates .plate-group .plate-card:hover i {
+  animation: spin 0.5s ease-in-out;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.resto-main .plates .plate-group .plate-card:hover .plate-description { /* comment faire?? */
+  overflow: hidden;
+}
+.resto-main .order-button {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.resto-main .order-button button {
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 200ms;
+  margin-top: 2rem;
+  width: 12rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+.resto-main .order-button button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=style.css.map */
