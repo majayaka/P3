@@ -33,11 +33,15 @@ header {
     .fa-heart {
         position: absolute;
         font-size: 1.5rem;
-        right: 4rem;
-        top: 30rem;
+        right: 3rem;
+        top: 29rem;
         background-color: transparent;
         color: colors.$lightgrey;
         border: none;
+
+        @media (max-width: 375px) {
+        top: 25.5rem;
+        }
         
       }
   
@@ -80,15 +84,16 @@ header {
 }
 
 .resto-main {
-    padding: 0 1rem;
+    padding: 2rem 1rem 5rem 0;
+    margin-top: -2rem;
     background-color: colors.$slightlygrey;
     .plates {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1rem;
     
         @media (max-width: variables.$break-point){
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 1fr);
         }
 
        .plate-group {
@@ -98,18 +103,20 @@ header {
             border-bottom: 3px solid colors.$light-green;
             padding-bottom: 0.5rem;
             width: 10%;
+            margin: 0.5rem 0 1rem 1rem;
 
          }
         
             .plate-card {
                 display: flex;
                 background-color: white;
-                width: 20rem;
+                max-width: 70rem;
+                width: 90%;
                 border-radius: 1rem;
                 margin: 1rem;
                 overflow:hidden;
                 @media (max-width: variables.$break-point) {
-                    width: 80%;
+                    width:93%;
                 }
 
                 @include mixins.base;  
@@ -121,10 +128,9 @@ header {
                     align-items: flex-end;
                 }
                 .plate-description {
-                    padding: 1rem;
-                    overflow:hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    padding: 1rem 1.5rem 1rem 1rem;
+                    overflow: hidden;
+                    width: 90%;
 
                     h4, p {
                         overflow:hidden;
@@ -160,7 +166,7 @@ header {
                     }
                     i {
                         @include animations.spin;
-                        animation: spin 0.5s ease-in-out;
+                        animation: spin 1s ease-in-out;
                     }
                     .plate-description {     /* comment faire?? */
                         overflow:hidden;

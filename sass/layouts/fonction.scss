@@ -17,8 +17,11 @@
         display:flex;
         gap: 1.5rem;
         position:relative;
+        padding-right: 1rem;
         @media (max-width: 800px) {
             flex-direction: column;
+            text-align: center;
+            padding-right: 1rem;
             
         }
     }
