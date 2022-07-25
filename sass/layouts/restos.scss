@@ -56,7 +56,8 @@
             position: relative;
             background-color: white;
             border-radius: 0 0 1rem 1rem;
-            @include mixins.heart-effect;
+        
+            
             
             h3 {
                 padding: 1rem 0 0 1rem;
@@ -66,11 +67,58 @@
                 padding: 0.5rem 0 1rem 1rem;
             }
 
+            .fa-heart {
+                position: absolute;
+                font-size: 1.5rem;
+                right: 20px;
+                top: 20px;
+                background-color: transparent;
+                color: colors.$lightgrey;
+                border: none;
+                
+              }
+          
+          .fa-heart:hover{
+                animation: heart 1s ease-in-out;
+                transform: scale(1.2);
+                animation-fill-mode: forwards;
+
+              
+          }
+
+          @keyframes heart {
+            0% {
+              background: linear-gradient(0deg, #FF79DA, #9356DC 0%, white 0%);
+              -webkit-background-clip: text;
+              color: transparent;
+              font-weight: bold;
             }
-            &:hover .fas {
-                opacity: 1;
-                transform: translateY(-50%) scale(1.02);
+            
+            25% {
+                background: linear-gradient(0deg, #FF79DA, #9356DC 25%);
+                -webkit-background-clip: text;
+                color: transparent;
+                font-weight: bold;
             }
+            50% {
+              background: linear-gradient(0deg, #FF79DA, #9356DC 50%);
+              -webkit-background-clip: text;
+              color: transparent;
+              font-weight: bold;
+            }
+            100% {
+              background: linear-gradient(0deg, #FF79DA, #9356DC 100%);
+              -webkit-background-clip: text;
+              color: transparent;
+              font-weight: bold;
+            }
+          }
+        
+        }
+        
+            
+        }
+        
     }
 
-}
+

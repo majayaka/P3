@@ -26,10 +26,57 @@ header {
         font-family: "Shrikhand", "cursive";
         padding: 2rem 1rem;
         position: relative;
-        @include mixins.heart-effect;
         border-radius: 2rem 2rem 0 0;
         background-color: colors.$slightlygrey;
     }
+
+    .fa-heart {
+        position: absolute;
+        font-size: 1.5rem;
+        right: 4rem;
+        top: 30rem;
+        background-color: transparent;
+        color: colors.$lightgrey;
+        border: none;
+        
+      }
+  
+  .fa-heart:hover{
+        animation: heart 1s ease-in-out;
+        transform: scale(1.2);
+        animation-fill-mode: forwards;
+
+      
+  }
+
+  @keyframes heart {
+    0% {
+      background: linear-gradient(0deg, #FF79DA, #9356DC 0%, white 0%);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+    
+    25% {
+        background: linear-gradient(0deg, #FF79DA, #9356DC 25%);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+    }
+    50% {
+      background: linear-gradient(0deg, #FF79DA, #9356DC 50%);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+    100% {
+      background: linear-gradient(0deg, #FF79DA, #9356DC 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+  }
+
 }
 
 .resto-main {
@@ -61,6 +108,9 @@ header {
                 border-radius: 1rem;
                 margin: 1rem;
                 overflow:hidden;
+                @media (max-width: variables.$break-point) {
+                    width: 80%;
+                }
 
                 @include mixins.base;  
                 .prix {

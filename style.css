@@ -10,6 +10,7 @@ a {
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  width: 100%;
 }
 
 main {
@@ -194,63 +195,51 @@ header {
   background-color: white;
   border-radius: 0 0 1rem 1rem;
 }
-.restos .card .resto_content::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #787878;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-.restos .card .resto_content::after {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #787878;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
-  opacity: 0;
-  color: transparent;
-  font-weight: 900;
-}
-.restos .card .resto_content:hover::after {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
-}
 .restos .card .resto_content h3 {
   padding: 1rem 0 0 1rem;
 }
 .restos .card .resto_content p {
   padding: 0.5rem 0 1rem 1rem;
 }
-.restos .card:hover .fas {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.02);
+.restos .card .resto_content .fa-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  color: #7e7e7e;
+  border: none;
+}
+.restos .card .resto_content .fa-heart:hover {
+  animation: heart 1s ease-in-out;
+  transform: scale(1.2);
+  animation-fill-mode: forwards;
+}
+@keyframes heart {
+  0% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 0%, white 0%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  25% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 25%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
 }
 
 footer {
@@ -296,53 +285,45 @@ header h1 {
   border-radius: 2rem 2rem 0 0;
   background-color: #F6F6F6;
 }
-.resto_title h2::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 2rem;
+.resto_title .fa-heart {
   position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #787878;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
+  font-size: 1.5rem;
+  right: 4rem;
+  top: 30rem;
+  background-color: transparent;
+  color: #7e7e7e;
+  border: none;
 }
-.resto_title h2::after {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 2rem;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #787878;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
-  opacity: 0;
-  color: transparent;
-  font-weight: 900;
+.resto_title .fa-heart:hover {
+  animation: heart 1s ease-in-out;
+  transform: scale(1.2);
+  animation-fill-mode: forwards;
 }
-.resto_title h2:hover::after {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+@keyframes heart {
+  0% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 0%, white 0%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  25% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 25%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
 }
 
 .resto-main {
@@ -373,6 +354,11 @@ header h1 {
   margin: 1rem;
   overflow: hidden;
   box-shadow: 2px 1px 8px -3px #000000;
+}
+@media (max-width: 1000px) {
+  .resto-main .plates .plate-group .plate-card {
+    width: 80%;
+  }
 }
 .resto-main .plates .plate-group .plate-card .prix {
   margin-left: auto;
