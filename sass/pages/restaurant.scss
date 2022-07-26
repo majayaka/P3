@@ -107,6 +107,27 @@ header {
 
          }
         
+            .order1 {
+                -webkit-animation-fill-mode: backwards;
+                animation-fill-mode: backwards;
+                -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;      
+            }
+
+            .order2 {
+                -webkit-animation-fill-mode: backwards;
+                animation-fill-mode: backwards;
+                -webkit-animation-delay: 1s;
+                animation-delay: 1s;    
+            }
+
+            .order3 {
+                -webkit-animation-fill-mode: backwards;
+                animation-fill-mode: backwards;
+                -webkit-animation-delay: 1.8s;
+                animation-delay: 1.8s;     
+            }
+
             .plate-card {
                 display: flex;
                 background-color: white;
@@ -115,8 +136,32 @@ header {
                 border-radius: 1rem;
                 margin: 1rem;
                 overflow:hidden;
+                animation: cardup 2s linear ;
                 @media (max-width: variables.$break-point) {
                     width:93%;
+                }
+                
+
+                @keyframes cardup {
+                    0% {
+                        margin-top: 3rem;
+                        opacity: 0;
+                    }
+
+                    25% {
+                        margin-top: 2rem;
+                        opacity: 0.5;
+                    }
+
+                    50% {
+                        margin-top: 1rem;
+                        opacity: 0.5;
+                    }
+
+                    100% {
+                        margin-top: 0;
+                        opacity: 1;
+                    }
                 }
 
                 @include mixins.base;  
@@ -168,7 +213,7 @@ header {
                         @include animations.spin;
                         animation: spin 1s ease-in-out;
                     }
-                    .plate-description {     /* comment faire?? */
+                    .plate-description {    
                         overflow:hidden;
                     }
                     
