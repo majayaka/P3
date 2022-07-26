@@ -360,13 +360,17 @@ footer .fa-handshake-angle {
 }
 
 /* comment faire sans @mixin?? */
-header h1 {
+header {
+  height: 8vh;
+}
+header img {
   padding-bottom: 1rem;
+  width: 10rem;
 }
 
 .banner img {
   width: 100%;
-  height: 50vh;
+  height: 33vh;
   object-fit: cover;
   display: block;
   object-position: center;

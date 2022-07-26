@@ -4,15 +4,18 @@
 @use "../utils/animations";
 
 header {
-    h1 {
+    height: 8vh;
+    img {
         padding-bottom: 1rem;
+        width: 10rem;
+        
     }
 
 }
 
 .banner img {
     width: 100%;
-    height: 50vh;
+    height: 33vh;
     object-fit: cover;
     display: block;
     object-position: center;
