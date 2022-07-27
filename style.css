@@ -395,11 +395,6 @@ header img {
   color: #7e7e7e;
   border: none;
 }
-@media (max-width: 375px) {
-  .resto_title .fa-heart {
-    top: 25.5rem;
-  }
-}
 .resto_title .fa-heart:hover {
   animation: heart 1s ease-in-out;
   transform: scale(1.2);
