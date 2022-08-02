@@ -5,10 +5,18 @@
 
 header {
     height: 8vh;
+    position: relative;
+    text-align: center;
+
     img {
         padding-bottom: 1rem;
         width: 10rem;
-        
+    }
+    .fa-arrow-left {
+        position: absolute;
+        left: 2rem;
+        top: 1.3rem;
+
     }
 
 }
@@ -24,6 +32,7 @@ header {
 
 .resto_title {
     margin-top: -2rem;
+    position: relative;
 
     h2 {
         font-family: "Shrikhand", "cursive";
@@ -36,15 +45,11 @@ header {
     .fa-heart {
         position: absolute;
         font-size: 1.5rem;
-        right: 3rem;
-        top: 20rem;
+        right: 40px;
+        top: 40px;
         background-color: transparent;
         color: colors.$lightgrey;
         border: none;
-
-        @media (max-width: 375px) {
-            top: 17.5rem;
-        }
         
       }
   

@@ -35,7 +35,16 @@ body .loading p {
   position: relative;
   left: 0;
   top: 15rem;
-  animation: flash 1.5s linear infinite;
+  -webkit-animation: flash 1.5s linear infinite;
+          animation: flash 1.5s linear infinite;
+}
+@-webkit-keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 @keyframes flash {
   0%, 100% {
@@ -65,6 +74,20 @@ body .loading .loader {
   left: 0;
   z-index: 20;
 }
+@-webkit-keyframes time {
+  0% {
+    z-index: 10;
+    visibility: visible;
+  }
+  99% {
+    z-index: 10;
+    visibility: visible;
+  }
+  100% {
+    z-index: -999;
+    visibility: hidden;
+  }
+}
 @keyframes time {
   0% {
     z-index: 10;
@@ -75,6 +98,32 @@ body .loading .loader {
     visibility: visible;
   }
   100% {
+    z-index: -999;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    z-index: 12;
+    visibility: visible;
+  }
+  25% {
+    transform: rotate(720deg);
+    z-index: 12;
+    visibility: visible;
+  }
+  50% {
+    transform: rotate(1440deg);
+    z-index: 12;
+    visibility: visible;
+  }
+  99% {
+    z-index: 12;
+    visibility: visible;
+  }
+  100% {
+    transform: rotate(2880deg);
     z-index: -999;
     visibility: hidden;
   }
@@ -307,9 +356,37 @@ header {
   border: none;
 }
 .restos .card .resto_content .fa-heart:hover {
-  animation: heart 1s ease-in-out;
+  -webkit-animation: heart 1s ease-in-out;
+          animation: heart 1s ease-in-out;
   transform: scale(1.2);
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes heart {
+  0% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 0%, white 0%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  25% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 25%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
 }
 @keyframes heart {
   0% {
@@ -362,22 +439,32 @@ footer .fa-handshake-angle {
 /* comment faire sans @mixin?? */
 header {
   height: 8vh;
+  position: relative;
+  text-align: center;
 }
 header img {
   padding-bottom: 1rem;
   width: 10rem;
 }
+header .fa-arrow-left {
+  position: absolute;
+  left: 2rem;
+  top: 1.3rem;
+}
 
 .banner img {
   width: 100%;
   height: 33vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
-  object-position: center;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .resto_title {
   margin-top: -2rem;
+  position: relative;
 }
 .resto_title h2 {
   font-family: "Shrikhand", "cursive";
@@ -389,21 +476,18 @@ header img {
 .resto_title .fa-heart {
   position: absolute;
   font-size: 1.5rem;
-  right: 3rem;
-  top: 20rem;
+  right: 40px;
+  top: 40px;
   background-color: transparent;
   color: #7e7e7e;
   border: none;
 }
-@media (max-width: 375px) {
-  .resto_title .fa-heart {
-    top: 17.5rem;
-  }
-}
 .resto_title .fa-heart:hover {
-  animation: heart 1s ease-in-out;
+  -webkit-animation: heart 1s ease-in-out;
+          animation: heart 1s ease-in-out;
   transform: scale(1.2);
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 @keyframes heart {
   0% {
@@ -480,12 +564,31 @@ header img {
   border-radius: 1rem;
   margin: 1rem;
   overflow: hidden;
-  animation: cardup 2s linear;
+  -webkit-animation: cardup 2s linear;
+          animation: cardup 2s linear;
   box-shadow: 2px 1px 8px -3px #000000;
 }
 @media (max-width: 1000px) {
   .resto-main .plates .plate-group .plate-card {
     width: 93%;
+  }
+}
+@-webkit-keyframes cardup {
+  0% {
+    margin-top: 3rem;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 2rem;
+    opacity: 0.5;
+  }
+  50% {
+    margin-top: 1rem;
+    opacity: 0.5;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
   }
 }
 @keyframes cardup {
@@ -545,7 +648,8 @@ header img {
   margin-right: 0;
 }
 .resto-main .plates .plate-group .plate-card:hover i {
-  animation: spin 1s ease-in-out;
+  -webkit-animation: spin 1s ease-in-out;
+          animation: spin 1s ease-in-out;
 }
 @keyframes spin {
   0% {
@@ -578,6 +682,4 @@ header img {
 .resto-main .order-button button:hover {
   opacity: 0.9;
   transform: scale(1.02);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

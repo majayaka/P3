@@ -1,0 +1,133 @@
+.restos {
+  background-color: #f6f6f6;
+  padding: 3.5rem 1rem 5rem 1rem;
+}
+.restos h2 {
+  padding: 0 0 2rem;
+}
+.restos .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .restos .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.restos .wrapper .new {
+  position: relative;
+}
+.restos .wrapper .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+@media (max-width: 1000px) {
+  .restos .card {
+    width: 100%;
+  }
+}
+.restos .card_image {
+  height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+.restos .card_image-1 {
+  background-image: url("images/restaurants/menu-1.jpg");
+}
+.restos .card_image-2 {
+  background-image: url("images/restaurants/menu-2.jpg");
+}
+.restos .card_image-3 {
+  background-image: url("images/restaurants/menu-3.jpg");
+}
+.restos .card_image-4 {
+  background-image: url("images/restaurants/menu-4.jpg");
+}
+.restos .card .resto_content {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.restos .card .resto_content h3 {
+  padding: 1rem 0 0 1rem;
+}
+.restos .card .resto_content p {
+  padding: 0.5rem 0 1rem 1rem;
+}
+.restos .card .resto_content .fa-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  color: #7e7e7e;
+  border: none;
+}
+.restos .card .resto_content .fa-heart:hover {
+  -webkit-animation: heart 1s ease-in-out;
+          animation: heart 1s ease-in-out;
+  transform: scale(1.2);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes heart {
+  0% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 0%, white 0%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  25% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 25%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+}
+@keyframes heart {
+  0% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 0%, white 0%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  25% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 25%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  50% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    background: linear-gradient(0deg, #FF79DA, #9356DC 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=restos.css.map */

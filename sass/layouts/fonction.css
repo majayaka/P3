@@ -1,7 +1,54 @@
+.fonction {
+  counter-reset: numbers;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.fonction h2 {
+  padding: 0 0 1rem 1rem;
+}
 .fonction ol {
   display: flex;
+  gap: 1.5rem;
+  position: relative;
+  padding-right: 1rem;
+}
+@media (max-width: 800px) {
+  .fonction ol {
+    flex-direction: column;
+    text-align: center;
+    padding-right: 1rem;
+  }
 }
 .fonction li {
+  position: relative;
+  list-style: none;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.fonction li::before {
+  content: counter(numbers);
+  counter-increment: numbers;
+  color: white;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+}
+.fonction li:hover {
+  transform: scale(1.02);
+  background-color: #F5EDFF;
+}
+.fonction li i.fa-solid {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=fonction.css.map */
