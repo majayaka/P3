@@ -106,15 +106,24 @@ header {
 
        .plate-group {
          
-        h3{
+        h3 {
+            position: relative;
             font-weight: 100;
-            border-bottom: 3px solid colors.$light-green;
-            padding-bottom: 0.5rem;
-            width: 10%;
+            color: blue;
+            padding-bottom: 10px;
             margin: 0.5rem 0 1rem 1rem;
 
          }
         
+         h3::after {
+            content: "";
+            width:3rem;
+            height: 0.25rem;
+            background-color: #99E2D0;
+            position: absolute;
+            bottom: 0;
+            left:0;
+         }
             .order1 {
                 -webkit-animation-fill-mode: backwards;
                 animation-fill-mode: backwards;
